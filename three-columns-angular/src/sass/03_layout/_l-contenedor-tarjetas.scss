@@ -1,0 +1,12 @@
+
+.l-contenedor-tarjetas {
+  width: 90%;
+  max-width: 1050px;
+  margin-block: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media screen and (max-width: 774px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

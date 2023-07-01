@@ -1,0 +1,5 @@
+@mixin shadow($profundidad) {
+    -webkit-box-shadow: getBoxShadow($profundidad);
+    -moz-box-shadow: getBoxShadow($profundidad);
+    box-shadow: getBoxShadow($profundidad);
+}

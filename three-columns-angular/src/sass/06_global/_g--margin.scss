@@ -1,0 +1,36 @@
+@each $clave in getMarginKeys() {
+    $valor: getMargin($clave+1);
+
+    .g--margin-#{$clave} {
+        margin: $valor;
+    }
+
+    .g--margin-left-#{$clave} {
+        margin-left: $valor;
+    }
+
+    .g--margin-right-#{$clave} {
+        margin-right: $valor;
+    }
+
+    .g--margin-top-#{$clave} {
+        margin-top: $valor;
+    }
+
+    .g--margin-bottom-#{$clave} {
+        margin-bottom: $valor;
+    }
+
+    .g--margin-vertical-#{$clave} {
+        margin-top: $valor;
+        margin-bottom: $valor;
+    }
+
+    .g--margin-horizontal-#{$clave} {
+        margin-left: $valor;
+        margin-right: $valor;
+    }
+}
+
+
+

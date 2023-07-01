@@ -1,0 +1,33 @@
+@each $clave in getPaddingKeys() {
+    $valor: getPadding($clave+1);
+
+    .g--padding-#{$clave} {
+        padding: $valor;
+    }
+
+    .g--padding-left-#{$clave} {
+        padding-left: $valor;
+    }
+
+    .g--padding-right-#{$clave} {
+        padding-right: $valor;
+    }
+
+    .g--padding-top-#{$clave} {
+        padding-top: $valor;
+    }
+
+    .g--padding-bottom-#{$clave} {
+        padding-bottom: $valor;
+    }
+
+    .g--padding-vertical-#{$clave} {
+        padding-top: $valor;
+        padding-bottom: $valor;
+    }
+
+    .g--padding-horizontal-#{$clave} {
+        padding-left: $valor;
+        padding-right: $valor;
+    }
+}

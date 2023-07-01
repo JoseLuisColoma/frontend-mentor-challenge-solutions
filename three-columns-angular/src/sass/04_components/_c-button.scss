@@ -1,0 +1,22 @@
+.c-button {
+  font-family: getFontFamily(principal);
+  padding-top: 16px;
+  padding-bottom: getPadding(8);
+  padding-right: getPadding(11);
+  padding-left: getPadding(11);
+  border-radius: getBorderRadius(8);
+  font-size: getFontSize(4);
+  font-weight: 400;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  bottom: 32px;
+
+  &:hover {
+  background: transparent;
+  border: 2px solid getColorVariants(Blanco);
+  color: getColorVariants(Blanco);
+  }
+}

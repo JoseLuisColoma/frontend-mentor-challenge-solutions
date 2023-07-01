@@ -1,0 +1,88 @@
+.c-panel-car {
+  padding: getPadding(11);
+  padding-bottom: getPadding(16);
+  margin-bottom: getMargin(8);
+  margin-right: getMargin(8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+  border-radius: getBorderRadius(6);
+  position: relative;
+
+  & .img-div {
+    width: 65px;
+    height: 41px;
+  }
+
+  & h1 {
+    text-transform: uppercase;
+    font-family: getFontFamily(alternativa);
+    font-size: 40px;
+  }
+
+  & p {
+    font-family: 'Lexend Deca';
+    color: getColorVariants(TransparentWhite);
+    line-height: 1.5;
+    font-size: getFontSize(5);
+  }
+}
+
+.c-panel-car:nth-of-type(1) {
+  background-color: getColorVariants(BrightOrange);
+
+  & .img-div {
+    background: url(./../../assets/images/icon-sedans.svg) no-repeat center/cover;
+  }
+
+  & button {
+    color: getColorVariants(BrightOrange);
+  }
+
+  & button:hover {
+    background: transparent;
+    border: 2px solid getColorVariants(Blanco);
+    color: getColorVariants(Blanco);
+  }
+}
+
+.c-panel-car:nth-of-type(2) {
+  background-color: getColorVariants(DarkCyan2);
+
+  & .img-div {
+    background: url(./../../assets/images/icon-suvs.svg) no-repeat center/cover;
+  }
+
+  & .button {
+    color: getColorVariants(DarkCyan2);
+  }
+
+  & button:hover {
+    background: transparent;
+    border: 2px solid getColorVariants(Blanco);
+    color: getColorVariants(Blanco);
+  }
+}
+
+.c-panel-car:nth-of-type(3) {
+  background: getColorVariants(VeryDarkCyan);
+
+  & .img-div {
+    background: url(./../../assets/images/icon-luxury.svg) no-repeat center/cover;
+  }
+
+  & button {
+    color: getColorVariants(VeryDarkCyan);
+  }
+
+  & button:hover {
+    background: transparent;
+    border: 2px solid getColorVariants(Blanco);
+    color: getColorVariants(Blanco);
+  }
+}
+
+
+

@@ -1,0 +1,8 @@
+@each $textType in getTextKeys() {
+    @each $clave,$valor in getTextSizes($textType) {
+        .g--#{$textType}-#{$clave}{
+            font-family: getTextFamily($textType);
+            font-size: $valor;
+        }
+    }
+}

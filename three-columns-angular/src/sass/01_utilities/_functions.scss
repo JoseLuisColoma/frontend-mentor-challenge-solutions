@@ -1,0 +1,95 @@
+@function getPadding($key) {
+  @return nth($paddings, $key);
+}
+
+@function getPaddingKeys() {
+  $paddingKeys: ();
+
+  @for $i from 0 to length($paddings) {
+    $paddingKeys: append($paddingKeys, $i);
+  }
+
+  @return $paddingKeys;
+}
+
+@function getMargin($key) {
+  @return nth($margins, $key);
+}
+
+@function getMarginKeys() {
+  $marginKeys: ();
+
+  @for $i from 0 to length($margins) {
+    $marginKeys: append($marginKeys, $i);
+  }
+
+  @return $marginKeys;
+}
+
+@function getFontSize($key) {
+  @return nth($font-sizes, $key);
+}
+
+@function getFontSizeKeys() {
+  $fontSizeKeys: ();
+
+  @for $i from 0 to length($font-sizes) {
+    $fontSizeKeys: append($fontSizeKeys, $i);
+  }
+
+  @return $fontSizeKeys;
+}
+
+@function getBorderRadius($key) {
+  @return nth($border-radius, $key);
+}
+
+@function getBorderRadiusKeys() {
+  $borderRadiousKeys: ();
+
+  @for $i from 0 to length($border-radius) {
+    $borderRadiousKeys: append($borderRadiousKeys, $i);
+  }
+
+  @return $borderRadiousKeys;
+}
+
+@function getBoxShadow($key) {
+  @return unquote(nth($shadows, $key+1));
+}
+
+@function getBoxShadowKeys() {
+  $boxShadowsKeys: ();
+
+  @for $i from 0 to length($shadows) {
+    $boxShadowsKeys: append($boxShadowsKeys, $i);
+  }
+
+  @return $boxShadowsKeys;
+}
+
+@function getFontFamily($key) {
+  @return unquote(map-get($font-family, "" + $key));
+}
+
+@function getColorVariants($key) {
+  @return map-get($colores, $key);
+}
+
+@function getColor($key, $index) {
+  @return nth(map-get($colores, $key), $index);
+}
+
+@function getTextFamily($key) {
+  $textType : map-get($texto, $key);
+  @return map-get($textType, "font-family");
+}
+
+@function getTextSizes($key) {
+  $textType : map-get($texto, $key);
+  @return map-get($textType, "font-sizes");
+}
+
+@function getTextKeys(){
+  @return map-keys($texto);
+}
